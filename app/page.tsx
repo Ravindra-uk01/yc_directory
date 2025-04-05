@@ -21,7 +21,7 @@ export default function Home() {
             .
           </li>
           <li className="tracking-[-.01em]">
-           Hello world! This is a simple Next.js app with Tailwind CSS and
+           Heyyy
           </li>
         </ol>
 
