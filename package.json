@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "packageManager": "npm@10.5.2",
+  "type": "module",
   "overrides": {
     "react": "$react",
     "react-dom": "$react-dom",

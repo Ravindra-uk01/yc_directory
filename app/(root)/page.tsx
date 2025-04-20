@@ -1,14 +1,37 @@
+import SearchForm from "../components/SearchForm";
+
 
 export default function Home() {
   return (
-   <>
-    <section className="pink_container bg-blue-500">
-      <div className="pink_container_inner">
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
-        <p className="text-2xl">This is a test</p>
-      </div>
-    </section>
-    <h1>Home</h1>
-   </>
+    <>
+      <section className="pink_container ">
+        <h1 className="heading">
+          Pitch Your Startup,
+          <br />
+          Connect With Entrepreneurs
+        </h1>
+        <p className="sub-heading">
+          Submit Ideas, Vote on Pitches, and Get Noticed in Virtual
+          Competitions.
+        </p>
+       
+        <SearchForm />
+      </section>
+
+      {/* <section className="pink_container">
+        <h1 className="heading">
+          Pitch Your Startup, <br />
+          Connect With Entrepreneurs
+        </h1>
+
+        <p className="sub-heading !max-w-3xl">
+          Submit Ideas, Vote on Pitches, and Get Noticed in Virtual
+          Competitions.
+        </p>
+
+        <SearchForm query={query} />
+      </section> */}
+      <h1>Home</h1>
+    </>
   );
 }

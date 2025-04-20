@@ -1,13 +1,15 @@
-import type {Config} from "tailwindcss";
+import tailwindcssAnimate from 'tailwindcss-animate';
+import tailwindcssTypography from '@tailwindcss/typography';
+import type { Config } from 'tailwindcss';
 
+/** @type {import('tailwindcss').Config} */
 const config: Config = {
-    // darkMode: ["class"],
     content: [
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
         "./app/**/*.{js,ts,jsx,tsx,mdx}",
         "./sanity/**/*.{js,ts,jsx,tsx,mdx}",
-        "./**/*.{js,ts,jsx,tsx,mdx}"
+        "./**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
         extend: {
@@ -44,9 +46,10 @@ const config: Config = {
                 200: "2px 2px 0px 2px rgb(0, 0, 0)",
                 300: "2px 2px 0px 2px rgb(238, 43, 105)",
             },
+           
         },
     },
-    plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+    plugins: [tailwindcssAnimate, tailwindcssTypography],
 };
 
 export default config;
