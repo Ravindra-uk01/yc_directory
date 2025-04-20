@@ -7,41 +7,11 @@
   /* --font-work-sans: 'Work Sans', sans-serif; */
 }
 
+
+
 @layer utilities {
 
-    .pink_container{
-        @apply w-full min-h-[530px] flex flex-col justify-center items-center bg-primary  py-10 px-6;
-    }
-
-    .heading{
-        @apply bg-black px-6 py-3 text-white font-work-sans font-extrabold text-[36px] sm:text-[54px] sm:leading-[64px] leading-[46px] max-w-5xl text-center my-5 uppercase;
-    }
-
-    .sub-heading{
-        @apply font-medium text-[20px] text-white max-w-2xl text-center break-words;
-    }
-
-    /* searchform  */
-
-    .search_form{
-        @apply max-w-3xl w-full min-h-[80px] bg-white border-[5px] border-black rounded-[80px] text-[24px] mt-8 px-5 flex flex-row items-center gap-5;
-    }
-    .search_input{
-        @apply font-bold placeholder:font-semibold placeholder:text-black-100 w-full h-auto outline-none;
-    }
-    .search_btn{
-        /* @apply size-[50px] rounded-full bg-black flex justify-center items-center ; */
-        width: 50px !important;
-        height: 50px !important;
-        border-radius: 9999px !important; /* rounded-full */
-        background-color: #000000 !important; /* bg-black */
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-    }
-
-
-    /* .flex-between {
+    .flex-between {
         @apply flex justify-between items-center;
     }
 
@@ -77,6 +47,68 @@
         @apply font-normal text-sm text-white/80;
     }
 
+
+    .pink_container{
+        @apply w-full min-h-[530px] flex flex-col justify-center items-center bg-primary  py-10 px-6;
+
+        background-image: linear-gradient(
+            to right,
+            transparent 49.5%,
+            rgba(251, 232, 67, 0.2) 49.5%,
+            rgba(251, 232, 67, 0.6) 50.5%,
+            transparent 50.5%
+          );
+          background-size: 5% 100%;
+          background-position: center;
+          background-repeat: repeat-x;
+    }
+
+    .heading{
+        @apply bg-black px-6 py-3 text-white font-work-sans font-extrabold text-[36px] sm:text-[54px] sm:leading-[64px] leading-[46px] max-w-5xl text-center my-5 uppercase;
+    }
+
+    .sub-heading{
+        @apply font-medium text-[20px] text-white max-w-2xl text-center break-words;
+    }
+
+    /* searchform  */
+    .search_form{
+        @apply max-w-3xl w-full min-h-[80px] bg-white border-[5px] border-black rounded-[80px] text-[24px] mt-8 px-5 flex flex-row items-center gap-5;
+    }
+    .search_input{
+        @apply font-bold placeholder:font-semibold placeholder:text-black-100 w-full h-auto outline-none;
+    }
+    .search_btn{
+       
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 9999px !important; /* rounded-full */
+        background-color: #000000 !important; /* bg-black */
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        
+    }
+
+    .section_container{
+        @apply px-6 py-10 max-w-7xl mx-auto;
+    }
+
+    .card_grid{
+        @apply  gap-5 sm:grid sm:grid-cols-2 md:grid-cols-3 ;
+    }
+
+    /* .card_grid-sm {
+        @apply grid sm:grid-cols-2 gap-5;
+    } */
+
+    /* startup card details  */
+    .startup_card{
+        @apply bg-white border-[5px] border-black py-6 px-5 rounded-[22px] shadow-200 hover:border-primary transition-all duration-500 hover:shadow-300 hover:bg-primary-100;
+    }
+
+
+    /*
     
 
     .tag {
@@ -86,17 +118,7 @@
     
 
 
-    .section_container {
-        @apply px-6 py-10 max-w-7xl mx-auto;
-    }
-
-    .card_grid {
-        @apply grid md:grid-cols-3 sm:grid-cols-2 gap-5;
-    }
-
-    .card_grid-sm {
-        @apply grid sm:grid-cols-2 gap-5;
-    }
+   
 
     .no-result {
         @apply text-black-100 text-sm font-normal;
@@ -207,24 +229,12 @@
 
     .category-tag {
         @apply font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-full;
-    }
+    }*/
 
-    .pattern {
-        background-image: linear-gradient(
-                to right,
-                transparent 49.5%,
-                rgba(251, 232, 67, 0.2) 49.5%,
-                rgba(251, 232, 67, 0.6) 50.5%,
-                transparent 50.5%
-        );
-        background-size: 5% 100%;
-        background-position: center;
-        background-repeat: repeat-x;
-    }
-
+    
     .tag-tri {
         @apply before:content-[''] before:absolute before:top-2 before:left-2 before:border-t-[10px] before:border-t-black before:border-r-[10px] before:border-r-transparent after:content-[''] after:absolute after:bottom-2 after:right-2 after:border-b-[10px] after:border-b-black after:border-l-[10px] after:border-l-transparent;
-    }  */
+    }  
 }
 
 /* .w-md-editor-toolbar {
