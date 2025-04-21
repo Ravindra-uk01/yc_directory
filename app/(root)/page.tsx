@@ -11,11 +11,14 @@ export default async function Home({searchParams}: { searchParams: Promise<{quer
     _id: "1",
     views: 18,
     author: {
-      _id: 1
+      _id: 1,
+      name: "John Doe",
+      image: "https://avatars.githubusercontent.com/u/1486366?v=4"
+    
     },
     description: "This is a sample startup description.",
     title: "Sample Startup",
-    image: "https://images.unsplash.com/photo-1677631231950-1b2f3a4c5e7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+    image: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     category: "Robots"
   },
     {
@@ -23,11 +26,14 @@ export default async function Home({searchParams}: { searchParams: Promise<{quer
     _id: "2",
     views: 18,
     author: {
-      _id: 1
+      _id: 1,
+      name: "John Doe",
+      image: "https://avatars.githubusercontent.com/u/1486366?v=4"
+    
     },
     description: "This is a sample startup description.",
     title: "Sample Startup",
-    image: "https://images.unsplash.com/photo-1677631231950-1b2f3a4c5e7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+    image: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     category: "Robots"
   },
     {
@@ -35,11 +41,13 @@ export default async function Home({searchParams}: { searchParams: Promise<{quer
     _id: "3",
     views: 18,
     author: {
-      _id: 1
+      _id: 1,
+      name: "John Doe",
+      image: "https://avatars.githubusercontent.com/u/1486366?v=4"
     },
     description: "This is a sample startup description.",
     title: "Sample Startup",
-    image: "https://images.unsplash.com/photo-1677631231950-1b2f3a4c5e7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+    image: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     category: "Robots"
   },
 ]
@@ -64,7 +72,7 @@ export default async function Home({searchParams}: { searchParams: Promise<{quer
 
         <ul className="card_grid mt-2" >
           {
-            posts &&  posts.length>0 && posts.map((post) => 
+            posts &&  posts.length>0 && posts.map((post:StartupCardType) => 
               <StartupCard key={post._id} post={post} />
             )
           }
