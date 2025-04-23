@@ -6,6 +6,8 @@ import React from "react";
 import { Button } from "./ui/button";
 
 const StartupCard = ({ post }: { post: startCardType }) => {
+
+  console.log('post is ',post);
   return (
     <li className="startup_card">
       <div className="flex-between">

@@ -51,6 +51,9 @@ export default async function Home({searchParams}: { searchParams: Promise<{quer
     category: "Robots"
   },
 ]
+
+  console.log('checking the post ');
+
   return (
     <>
       <section className="pink_container ">
