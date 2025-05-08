@@ -2,29 +2,46 @@
   "name": "yc_directory",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predev": "npm run typegen",
+    "prebuild": "npm run typegen",
+    "typegen": "sanity schema extract --path=./sanity/extract.json && sanity typegen generate"
   },
   "packageManager": "npm@10.5.2",
-  "type": "module",
   "overrides": {
     "react": "$react",
     "react-dom": "$react-dom",
     "next": "$next"
   },
   "dependencies": {
+    "@radix-ui/react-avatar": "^1.1.1",
+    "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-slot": "^1.2.0",
+    "@radix-ui/react-toast": "^1.2.2",
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^3.60.0",
+    "@sentry/nextjs": "^8.34.0",
     "@tailwindcss/typography": "^0.5.16",
+    "@uiw/react-md-editor": "^4.0.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.487.0",
-    "next": "^15.3.1-canary.0",
+    "markdown-it": "^14.1.0",
+    "next": "15.0.0-canary.183",
     "next-auth": "^5.0.0-beta.25",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "next-sanity": "^9.5.1-canary.23",
+    "react": "19.0.0-rc-2d16326d-20240930",
+    "react-dom": "19.0.0-rc-2d16326d-20240930",
+    "sanity": "^3.60.0",
+    "sanity-plugin-markdown": "^5.0.0",
+    "server-only": "^0.0.1",
+    "slugify": "^1.6.6",
+    "styled-components": "^6.1.17",
     "tailwind-merge": "^3.2.0",
     "tailwindcss-animate": "^1.0.7",
     "tw-animate-css": "^1.2.5"
@@ -32,12 +49,14 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4.1.3",
+    "@types/markdown-it": "^14.1.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
-    "tailwindcss": "^4",
+    "postcss": "^8",
+    "tailwindcss": "^4.0.0",
     "typescript": "^5"
   }
 }
