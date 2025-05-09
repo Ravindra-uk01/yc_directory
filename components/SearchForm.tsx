@@ -5,6 +5,7 @@ import SearchResetForm from "./SearchFormReset"
 
 const SearchForm = ({query}: {query ?: string}) => {
   
+  console.log('abcd' );
   return (
     <Form action="/" scroll={false} className='search_form' >
         <input type="text" 
