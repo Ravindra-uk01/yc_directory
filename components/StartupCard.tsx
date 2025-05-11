@@ -23,7 +23,6 @@ const StartupCard = ({ post }: { post: startCardType }) => {
   } = post;
 
 
-  console.log('post is ',post);
   return (
     <li className="startup_card">
       <div className="flex-between">
@@ -70,7 +69,7 @@ const StartupCard = ({ post }: { post: startCardType }) => {
       />
 
       <div className="flex-between gap-3 mt-5">
-        <Link href={`query?category=${category?.toLowerCase()}`}>
+        <Link href={`?query=${category?.toLowerCase()}`}>
           <p className="text-16-medium" >{category}</p>
         </Link>
         <Button className="startup_card_btn" asChild >
