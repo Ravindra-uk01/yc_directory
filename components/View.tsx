@@ -13,7 +13,9 @@ const {views : totalViews } = await client.withConfig({
 
 after(async () => await writeClient.patch(id)
     .set({views: totalViews + 1})
-    .commit();)
+    .commit())
+
+console.log('views is ', totalViews)
 
   return (
     <div className='view-container' >
