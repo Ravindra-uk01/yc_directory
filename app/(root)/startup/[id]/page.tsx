@@ -18,8 +18,6 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
   const post = await client.fetch(STARTUP_BY_ID_QUERY, { id });
 
-  console.log("single post  is ", post);
-
   if (!post) {
     return notFound();
   }
