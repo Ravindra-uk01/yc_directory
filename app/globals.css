@@ -168,6 +168,26 @@
         @apply bg-zinc-400 h-10 w-24 rounded-lg fixed bottom-3 right-3;
     } 
 
+
+
+    /* startup form  */
+
+    .startup-form{
+      @apply max-w-2xl mx-auto bg-white my-10 space-y-8 px-6;
+    }
+
+     /* .startup-form {
+        @apply max-w-2xl mx-auto bg-white my-10 space-y-8 px-6;
+    } */
+
+    .startup-form_label {
+      @apply font-bold text-[18px] text-black uppercase;  
+    }
+
+    .startup-form_input {
+      @apply border-[3px] text-[18px] text-black font-semibold rounded-full mt-3
+    }
+
   /*
     
     
@@ -210,9 +230,7 @@
     } */
 
   /* startupform */
-  /* .startup-form {
-        @apply max-w-2xl mx-auto bg-white my-10 space-y-8 px-6;
-    }
+  /*
 
     .startup-form_label {
         @apply font-bold text-[18px] text-black uppercase;
