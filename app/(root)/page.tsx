@@ -15,7 +15,6 @@ export default async function Home({searchParams}: { searchParams: Promise<{quer
   // const posts = await client.fetch(STARTUPS_QUERY);  // this is basic version with where santiy caches data for 60sec
   const {data: posts} = await sanityFetch({query: STARTUPS_QUERY, params});  // this is the live version with sanity cache disabled
   
-  console.log('params is ', params);
   return (
     <>
       <section className="pink_container ">

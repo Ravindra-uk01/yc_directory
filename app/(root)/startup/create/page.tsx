@@ -10,6 +10,8 @@ const page = async() => {
         redirect('/');
     }
 
+    console.log('reached in startup creation page ');
+
   return (
     <>
         <section className='pink_container !min-h-[230px]' >
