@@ -7,16 +7,21 @@ import { Button } from "./ui/button";
 import { Send } from "lucide-react";
 import MDEditor from "@uiw/react-md-editor";
 import { formSchema } from "@/lib/validation";
+import { createPitch } from "@/lib/actions";
+import { useRouter } from "next/navigation";
+import { z } from "zod";
+import { toast } from "sonner";
 
 const StartupForm = () => {
   const [pitch, setPitch] = useState<string>("");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const router = useRouter();
 
   const handleSubmit = async(prevState:any, formData: FormData) => {
     try{
 
        const formValues = {
-        name: formData.get("name") as string,
+        title: formData.get("title") as string,
         description: formData.get("description") as string,
         category: formData.get("category") as string,
         link: formData.get("link") as string,
@@ -25,15 +30,33 @@ const StartupForm = () => {
 
        await formSchema.parseAsync(formValues);
 
-       
+       const result = await createPitch(prevState, formData, pitch);
+
+       if(result.status === "SUCCESS"){
+
+          toast.success("Your startup pitch has been created successfully");
+          router.push(`/startup/${result._id}`);
+       }
+       return result;
         
     }catch(error){
-      console.error("Error submitting form:", error);
-      setErrors({
-        title: "Failed to submit the form. Please try again later.",
-        description: "Failed to submit the form. Please try again later.",
-        pitch: "Failed to submit the form. Please try again later.",
-      });
+      if(error instanceof z.ZodError){
+          const fieldErrors = error.flatten().fieldErrors;
+          setErrors(fieldErrors as unknown as Record<string, string>);
+          toast.warning("Validation failed. Please check your inputs.");
+          return {
+            ...prevState,
+            error: "Validation failed",
+            status: "ERROR",
+          };
+      }
+
+        toast.error("An unexpected error occurred. Please try again later.");
+        return {
+          ...prevState,
+          error : "An Unexpected error has occured",
+          status : "ERROR"
+        };
     }
   }
 
@@ -46,13 +69,13 @@ const StartupForm = () => {
   return (
     <form action={formAction} className="startup-form">
       <div>
-        <label htmlFor="name" className="startup-form_label">
+        <label htmlFor="title" className="startup-form_label">
           Title
         </label>
         <Input
           type="text"
-          id="name"
-          name="name"
+          id="title"
+          name="title"
           className="startup-form_input"
           placeholder="Startup Title"
           required
