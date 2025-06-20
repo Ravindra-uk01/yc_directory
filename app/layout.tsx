@@ -71,7 +71,7 @@ export default function RootLayout({
         className={workSans.variable}
       >
         {children}
-        <Toaster/>
+        <Toaster position="top-center" richColors  closeButton />
       </body>
     </html>
   );

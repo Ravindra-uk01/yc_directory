@@ -194,30 +194,25 @@
       @apply text-red-500 mt-2 ml-2
      }
 
-     .startup-form_editor{
-
-     }
+     .startup-form_editor {
+        @apply mt-3 border-[3px] border-black text-[18px] text-black font-semibold placeholder:text-black-300 ;
+    }
 
      .startup-form_btn {
          @apply bg-primary border-[4px] border-black rounded-full min-h-[70px] w-full text-white p-5 font-bold text-[18px];
      }
-    /* 
-
-     .startup-form_editor {
-        @apply mt-3 border-[3px] border-black text-[18px] text-black font-semibold placeholder:text-black-300 !important;
-    }
-
-    .startup-form_btn {
-        @apply bg-primary border-[4px] border-black rounded-full p-5 min-h-[70px] w-full font-bold text-[18px] !important;
-    } 
-        
-    */
-
-  /*
     
-    
-
+  
   /* profile */
+
+  .profile_container{
+    @apply w-full p-10 flex gap-10
+  }
+
+  .profile_card{
+    @apply flex flex-col gap-10 bg-primary border-[5px] border-black shadow-100 rounded-[30px] p-10 h-[270px]
+  }
+
   /* .profile_container {
         @apply w-full pb-10 pt-20 px-6 max-w-7xl mx-auto lg:flex-row flex-col flex gap-10;
     }
