@@ -144,13 +144,7 @@ Your feedback and contributions are welcome! Please open an issue or submit a pu
 ---
 
 **Happy pitching! 🚀**
-Made with ❤️ by Ravindra Singh Rayal
 
-[1] https://github.com/sanity-io/next-sanity
-[2] https://github.com/sanity-io/sanity-template-nextjs-clean/blob/main/README.md
-[3] https://github.com/sanity-io/example-frontend-next-js/blob/master/README.md
-[4] https://github.com/hafffe/nextjs-sanity-template/blob/main/readme.md
-[5] https://github.com/sanity-io/sanity-template-nextjs-blog-comments/blob/main/README.md
-[6] https://www.sanity.io/plugins/next-auth-sanity
-[7] https://www.sanity.io/docs/developer-guides/create-your-own-sanity-template
-[8] https://github.com/sanity-io/sanity-template-nextjs-vercel-basic
+**Made with ❤️ by [Ravindra Singh Rayal](https://github.com/Ravindra-uk01)**
+
+
