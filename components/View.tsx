@@ -15,8 +15,6 @@ after(async () => await writeClient.patch(id)
     .set({views: totalViews + 1})
     .commit())
 
-console.log('views is ', totalViews)
-
   return (
     <div className='view-container' >
         <div className='absolute -top-2 -right-2' >

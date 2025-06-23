@@ -23,8 +23,6 @@ const StartupCard = ({ post }: { post: startCardType }) => {
     description,
   } = post;
 
-  console.log("checking the post ", post);
-
   return (
     <li className="startup_card">
       <div className="flex-between">
